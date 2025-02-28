@@ -7,6 +7,7 @@ module.exports = defineConfig({
     },
     baseUrl: 'http://localhost:3000',
     viewportHeight: 550,
-    viewportWidth: 660
+    viewportWidth: 660,
+    experimentalStudio: true
   },
 });
