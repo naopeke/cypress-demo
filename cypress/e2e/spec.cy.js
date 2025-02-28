@@ -1,3 +1,3 @@
 it('my first test', ()=>{
-    cy.visit('https://cypress.io')
+    cy.visit('/board/1')
 })
