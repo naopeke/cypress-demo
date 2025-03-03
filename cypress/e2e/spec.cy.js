@@ -26,47 +26,90 @@ it('my first test_04', ()=>{
     cyan.visit('/');
     cyan.get('[data-cy=board-item]')
     .first()
+
     cyan.get('[data-cy=board-item]')
     .last()
+    
     cyan.get('[data-cy=board-item]')
     .eq(0)
+    
     cyan.get('[data-cy=board-item]')
     .ne() //next
+    
     cyan.get('[data-cy=board-item]')
     .pre() //previous
+    
     cyan.get('[data-cy=board-item]')
     .pare() //parent
+    
     cyan.get('[data-cy=board-item]')
     .chi() //children
+    
     cyan.get('[data-cy=board-item]')
     .find()
 })
 
 it('interaction', ()=>{
     cy.visit('/board/1');
+
     cy.wait(3000);
+    
     cy.get('[data-cy="add-list-input"]')
         .type('new list {enter}');
+    
     cy.wait(3000);
+    
     cy.contains('Add another card')
         .click();
+    
     cy.get('[data-cy="new-card-input"]')
         .type('new card {enter}');
 })
 
 it('new test', ()=>{
     cy.visit('/');
+
     cy.get('[data-cy="star"]')
         .first()
         .click({force: true});
 
 })
 
-it.only('making assertions', ()=>{
+it('making assertions_01', ()=>{
     cy.visit('/board/1');
+
     cy.get('[data-cy=new-card]')
         .click();
+    
     cy.get('[data-cy="new-card-input"]')
         .type('bread {enter}');
+    
+    cy.get('[data-cy="card"]')
+        .should('be.visible');
+    
+    cy.get('[data-cy="new-card-input"]')
+        .type('milk {enter}');
+    
+    cy.get('[data-cy="card"]')
+        .should('have.length', 2);
+})
 
+it('making assertions_02', ()=>{
+    cy.visit('/board/1');
+    
+    cy.get('[data-cy="card-checkbox"]')
+        .check();
+
+    cy.get('[data-cy="card-checkbox"]')
+        .should('be.checked');
+    
+    cy.get('[data-cy="due-date"]')
+        .should('have.class', 'completed');
+})
+
+it('making assertions_03', ()=>{
+    cy.visit('/board/1');
+    
+    cy.get('[data-cy="list-name"]')
+        .should('have.value', 'groceries'); // input elementのためhave.textではない
 })

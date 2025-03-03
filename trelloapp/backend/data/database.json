@@ -8,7 +8,27 @@
       "id": 1
     }
   ],
-  "cards": [],
-  "lists": [],
+  "cards": [
+    {
+      "order": 0,
+      "boardId": 1,
+      "listId": 1,
+      "name": "bread",
+      "created": "2025-03-03",
+      "deadline": "2025-03-06",
+      "description": "",
+      "completed": true,
+      "id": 1
+    }
+  ],
+  "lists": [
+    {
+      "boardId": 1,
+      "name": "groceries",
+      "order": 0,
+      "created": "2025-03-03",
+      "id": 1
+    }
+  ],
   "users": []
 }
