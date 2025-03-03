@@ -34,8 +34,14 @@ it.only('chaining and retrying', ()=>{
 
     cy.contains('[data-cy="card"]', 'Mar 06 2025');
     cy.get('[data-cy="list"]')
-    .eq(0)    
-    .contains('[data-cy="card"]', 'Mar 06 2025')
+        .eq(0)    
+        .contains('[data-cy="card"]', 'Mar 06 2025')
 
     cy.get('[data-cy="card"]')
+        .last()
+        .click();
+    
+    // cy.get('[data-cy="card-detail-title"]')
+    //     .invoke('val')
+    //     .should('equal', 'ibu'); 
 })
