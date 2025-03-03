@@ -8,6 +8,7 @@ module.exports = defineConfig({
     baseUrl: 'http://localhost:3000',
     viewportHeight: 550,
     viewportWidth: 660,
-    experimentalStudio: true
+    experimentalStudio: true,
+    defaultCommandTimeout: 6000,
   },
 });

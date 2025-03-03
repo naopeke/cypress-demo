@@ -23,29 +23,29 @@ it('my first test_03', ()=>{
 })
 
 it('my first test_04', ()=>{
-    cyan.visit('/');
-    cyan.get('[data-cy=board-item]')
+    cy.visit('/');
+    cy.get('[data-cy=board-item]')
     .first()
 
-    cyan.get('[data-cy=board-item]')
+    cy.get('[data-cy=board-item]')
     .last()
     
-    cyan.get('[data-cy=board-item]')
+    cy.get('[data-cy=board-item]')
     .eq(0)
     
-    cyan.get('[data-cy=board-item]')
+    cy.get('[data-cy=board-item]')
     .ne() //next
     
-    cyan.get('[data-cy=board-item]')
+    cy.get('[data-cy=board-item]')
     .pre() //previous
     
-    cyan.get('[data-cy=board-item]')
+    cy.get('[data-cy=board-item]')
     .pare() //parent
     
-    cyan.get('[data-cy=board-item]')
+    cy.get('[data-cy=board-item]')
     .chi() //children
     
-    cyan.get('[data-cy=board-item]')
+    cy.get('[data-cy=board-item]')
     .find()
 })
 
