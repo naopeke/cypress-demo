@@ -2,8 +2,8 @@ it.only('chaining and retrying', ()=>{
     cy.visit('/');
 
     // 1st list
-    cy.get('[data-cy="first-board"]').type('Shopping list {enter}');
-    cy.get('[data-cy="add-list-input"]').should('be.visible').type('groceries {enter}');
+    cy.get('[data-cy="first-board"]').type('Shopping list{enter}');
+    cy.get('[data-cy="add-list-input"]').should('be.visible').type('groceries{enter}');
     cy.get('[data-cy=new-card]')
     .eq(0)
     .click();
