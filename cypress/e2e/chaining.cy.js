@@ -10,11 +10,11 @@ it.only('chaining and retrying', ()=>{
 
     // add 2 cards to the 1st list
     cy.get('[data-cy="new-card-input"]')
-        .type('bread {enter}');
+        .type('bread{enter}');
     cy.get('[data-cy="card"]')
         .should('be.visible');
     cy.get('[data-cy="new-card-input"]')
-        .type('milk {enter}');
+        .type('milk{enter}');
     cy.get('[data-cy="card"]')
         .should('have.length', 2);
 
@@ -22,13 +22,13 @@ it.only('chaining and retrying', ()=>{
     cy.get('[data-cy="create-list"]')
         .click();
     cy.get('[data-cy="add-list-input"]')
-        .type('drugstore {enter}');
+        .type('drugstore{enter}');
     cy.get('[data-cy="new-card"]')
         .eq(1)
         .click();
     cy.get('[data-cy="new-card-input"]')
         .first()
-        .type('ibu {enter}')
+        .type('ibu{enter}')
 
     
 
@@ -40,8 +40,4 @@ it.only('chaining and retrying', ()=>{
     cy.get('[data-cy="card"]')
         .last()
         .click();
-    
-    // cy.get('[data-cy="card-detail-title"]')
-    //     .invoke('val')
-    //     .should('equal', 'ibu'); 
 })
